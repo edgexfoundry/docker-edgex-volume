@@ -28,13 +28,13 @@ RUN addgroup consul && \
 RUN mkdir /data
 RUN mkdir /data/db
 RUN chmod a+rwx /data/db
-RUN echo "this directory is reserved for Dell Fuse database files" > /data/db/README
+RUN echo "this directory is reserved for EdgeX database files" > /data/db/README
 
 # EdgeX shared directories
 ENV EDGEX_BASE=/edgex
 RUN mkdir $EDGEX_BASE
 RUN mkdir $EDGEX_BASE/logs
-RUN echo "this directory is reserved for EdgeX Foundry log files" > $EDGEX_BASE/logs/README
+RUN echo "this directory is reserved for EdgeX log files" > $EDGEX_BASE/logs/README
 
 # Consul config and data directories
 # The /consul/data dir is used by Consul to store state. The agent will be started
@@ -43,7 +43,7 @@ RUN echo "this directory is reserved for EdgeX Foundry log files" > $EDGEX_BASE/
 RUN mkdir /consul
 RUN mkdir /consul/config
 RUN mkdir /consul/data
-RUN echo "this directory is reserved for EdgeX Foundry Consul config files" > /consul/config/README
+RUN echo "this directory is reserved for EdgeX Consul config files" > /consul/config/README
 RUN echo "this directory is reserved for EdgeX data files" > /consul/data/README
 RUN chown -R 100:1000 /consul
 
