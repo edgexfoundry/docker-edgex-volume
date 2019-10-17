@@ -46,6 +46,6 @@ RUN echo "this directory is reserved for EdgeX Consul config files" > /consul/co
 RUN echo "this directory is reserved for EdgeX data files" > /consul/data/README
 RUN chown -R 100:1000 /consul
 
-COPY static-services-config.json /consul/config
+COPY config /consul/config
 
 ENTRYPOINT /usr/bin/tail -f /dev/null
