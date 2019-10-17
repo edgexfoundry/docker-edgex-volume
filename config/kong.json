@@ -1,0 +1,18 @@
+{
+  "service": {
+    "id": "kong",
+    "name": "kong",
+    "address": "kong",
+    "port": 8001,
+    "checks": [
+      {
+        "name": "Health Check: kong",
+        "http": "http://kong:8001/status",
+        "method": "GET",
+        "interval": "1s",
+        "timeout": "1s",
+        "service_id": "kong"
+      }
+    ]
+  }
+}

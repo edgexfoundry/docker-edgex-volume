@@ -1,0 +1,17 @@
+{
+  "service": {
+    "id": "kong-db",
+    "name": "kong-db",
+    "checks": [
+      {
+        "name": "Health Check: kong-db (postgres)",
+        "args": [
+          "/consul/scripts/kong-db-checker.sh"
+        ],
+        "interval": "1s",
+        "timeout": "1s",
+        "service_id": "kong-db"
+      }
+    ]
+  }
+}
