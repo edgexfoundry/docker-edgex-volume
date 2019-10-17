@@ -1,0 +1,17 @@
+{
+  "service": {
+    "id": "kong-migrations",
+    "name": "kong-migrations",
+    "checks": [
+      {
+        "name": "Health Check: kong-migrations",
+        "args": [
+          "/consul/scripts/kong-migrations-checker.sh"
+        ],
+        "interval": "1s",
+        "timeout": "1s",
+        "service_id": "kong-migrations"
+      }
+    ]
+  }
+}
