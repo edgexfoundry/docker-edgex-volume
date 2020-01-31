@@ -20,7 +20,7 @@
 DOCKERS=edgex-volume
 .PHONY: $(DOCKERS)
 
-VERSION=$(shell cat ./VERSION)
+VERSION=$(shell cat ./VERSION 2>/dev/null || echo 0.0.0)
 DOCKER_TAG=$(VERSION)
 
 GIT_SHA=$(shell git rev-parse HEAD)
