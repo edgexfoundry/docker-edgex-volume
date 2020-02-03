@@ -4,3 +4,4 @@ glide.lock
 vendor
 .idea
 ./cmd/*.log
+VERSION
